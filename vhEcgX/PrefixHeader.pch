@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  vhEcgX
+//
+//  Created by 谷山丰 on 2018/7/16.
+//  Copyright © 2018年 谷山丰. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// __OBJC__这个宏,宏内引用的文件确保只被使用Objective-C语言的文件所引用，限定仅仅被OC代码使用
+#ifdef __OBJC__
+
+/**
+ *  配置自定义的测试Log
+ */
+#ifdef DEBUG
+#define DLOG(...) NSLog(__VA_ARGS__)
+#else
+#define DLOG(...)
+#endif
+
+#endif
+
+#import <Masonry.h>
+
+
+#endif /* PrefixHeader_pch */
